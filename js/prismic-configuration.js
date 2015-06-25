@@ -1,7 +1,10 @@
 var Configuration = {
 
   // -- API endpoint
-  apiEndpoint: 'https://lesbonneschoses.prismic.io/api',
+ // apiEndpoint: 'https://lesbonneschoses.prismic.io/api',
+  apiEndpoint: 'https://lesbonneschoses-vqp1iiuaacaalqz4.prismic.io/api',
+  
+ 
   //accessToken: '',
 
   // -- OAuth
@@ -9,6 +12,7 @@ var Configuration = {
 
   // -- Links resolution rules
   linkResolver: function(ctx, doc) {
+    //return 'detail.html?id=' + doc.id + '&slug=' + doc.slug + ctx.maybeRefParam;
     return 'detail.html?id=' + doc.id + '&slug=' + doc.slug + ctx.maybeRefParam;
   },
 

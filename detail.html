@@ -3,11 +3,22 @@
 <html>
     <head>
         <title>Your prismic.io project</title>
-        <script src="js/vendor/jquery-2.1.1.min.js"></script>
+        <!-- <script src="js/vendor/jquery-2.1.1.min.js"></script>
         <script src="js/vendor/prismic.io-1.0.28.min.js"></script>
         <script src="js/prismic-configuration.js"></script>
         <script src="js/prismic-helpers.js"></script>
+        <script src="js/prismic-templates.js"></script> -->
+        
+        <script src="js/vendor/jquery-2.1.1.min.js"></script> 
+    <!---  <script src="js/vendor/prismic.io-1.0.29.min.js"></script> -->
+         <!-- <script src="js/vendor/prismic.io-1.1.7.min">  </script> -->   <!-- not the same -->
+        <script src="js/vendor/prismic.io.js"> </script>   <!-- the same -->
+        <script src="js/prismic-configuration.js"></script>
+        <script src="js/prismic-helpers.js"></script>
         <script src="js/prismic-templates.js"></script>
+        
+        
+        
     </head>
     <body class="loading">
 
@@ -23,7 +34,7 @@
             <script type="text/template">
                 <%= doc.asHtml(ctx) %>
             </script>
-        </article>
+        </article> 
 
         <aside>
             <script type="text/template">
@@ -43,7 +54,7 @@
             </script>
         </aside>
 
-        <script src="//static.cdn.prismic.io/prismic.js"></script>
+        <script src="//static.cdn.prismic.io/prismic.js"></script>  <!-- the same -->
 
         <!-- Logic -->
 
@@ -78,7 +89,8 @@
                         }
 
                         // Feed the templates
-                        $('header, article, aside, footer').render({
+                     $('header, article, aside, footer').render({
+                    // $('header, article, aside, footer').render({
                             doc: doc,
                             ctx: ctx
                         });

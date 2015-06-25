@@ -19,7 +19,7 @@
         <h1 id="title">
             <script type="text/template">
                 <a href="index.html?<%= ctx.maybeRefParam %>">
-                    Your prismic.io project
+                    Your prismic.io projects
                 </a>
             </script>
         </h1>
@@ -43,17 +43,21 @@
                 <% } %>
             </script>
         </h2>
-
+        
         <ul id="list">
-            <script type="text/template">
+           <!---  syntax --> 
+           <script type="text/template">
                 <% for(var i=0; i<docs.results.length; i++) { %>
                     <li>
                         <a href="<%= ctx.linkResolver(ctx, docs.results[i]) %>">
                             <%= docs.results[i].slug %>
                         </a>
                     </li>
+            
+                    <p> test </p>            
                 <% } %>
-            </script>
+              
+           </script> 
         </ul>
 
         <div id="pagination">
@@ -97,7 +101,7 @@
         <!--   ga('send', 'pageview'); -->
         <!-- </script> -->
 
-        <script src="//static.cdn.prismic.io/prismic.js"></script>
+         <script src="//static.cdn.prismic.io/prismic.js"></script> 
 
         <div id="experiment">
           <script type="text/template">
@@ -139,7 +143,7 @@
                 });
 
             });
-        </script>
+        </script> 
 
     </body>
 </html>
