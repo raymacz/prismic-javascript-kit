@@ -16,15 +16,16 @@
 
     // -- Prismic Helpers
 
-    global.Helpers = {
+    global.Helpersz = {
 
         getApiHome: function(callback) {
-            Prismic.Api(Configuration.apiEndpoint, callback, Configuration.accessToken);
+            var xxx=Prismic.Api(Configuration.apiEndpoint, callback, Configuration.accessToken);
+            return  xxx;
         },
 
         buildContext: function(ref, callback) {
           // retrieve the API
-          global.Helpers.getApiHome(function(err, api, xhr) {
+          global.Helpersz.getApiHome(function(err, api, xhr) {
             if (err) { Configuration.onPrismicError(err, xhr); return; }
             var experimentCookie = prismic.startExperiment ? prismic.utils.docCookies.getItem('io.prismic.experiment') : null;
             var experimentRef = experimentCookie ? api.experiments.refFromCookie(experimentCookie) : null;
@@ -51,7 +52,7 @@
         },
 
         getOauthInitiate: function(callback) {
-          global.Helpers.getApiHome(function(err, api, xhr) {
+          global.Helpersz.getApiHome(function(err, api, xhr) {
               if(err) {
                   var response = JSON.parse(xhr.responseText);
                   callback && callback(null, response.oauth_initiate);
@@ -62,10 +63,22 @@
         },
 
         withPrismic: function(callback) {
-            global.Helpers.buildContext(global.Helpers.queryString['ref'], function(ctx) {
+            global.Helpersz.buildContext(global.Helpersz.queryString['ref'], function(ctx) {
                 callback.apply(window, [ctx]);
             });
+            
+            
         },
+        
+        ///----------
+        testwithPrismic: function(callback) {
+            global.Helpersz.buildContext(global.Helpersz.queryString['ref'], function(ctx) {
+                callback.apply(window, [ctx]);
+            });
+            
+            
+        },
+        ///---------
 
         // QueryString data
         queryString: parseQS(window.location.search.substring(1)),
