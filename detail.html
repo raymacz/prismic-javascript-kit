@@ -60,12 +60,15 @@
 
         <script type="text/javascript">
             $(function() {
-
-                Helpers.withPrismic(function(ctx) {
+                ///--------------------
+                //  Helpersz.withPrismic(function(ctx) {
+        
+///----------------
+                Helpersz.testwithPrismic(function(ctx) {
 
                     // Retrieve the document
-                    var id = Helpers.queryString['id'],
-                        slug = Helpers.queryString['slug'];
+                    var id = Helpersz.queryString['id'],
+                        slug = Helpersz.queryString['slug'];
 
                     ctx.api.form("everything").ref(ctx.ref).query('[[:d = at(document.id, "' + id + '")]]').submit(function(err, docs) {
 

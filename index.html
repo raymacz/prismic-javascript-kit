@@ -106,7 +106,7 @@
         <div id="experiment">
           <script type="text/template">
             <% if(ctx.api.experiments.current()) { %>
-              <script>Helpers.loadExperimentJs("<%= ctx.api.experiments.currentGoogleId() %>");<%= closeScript %>
+              <script>Helpersz.loadExperimentJs("<%= ctx.api.experiments.currentGoogleId() %>");<%= closeScript %>
             <% } %>
           </script>
         </div>
@@ -116,7 +116,7 @@
         <script type="text/javascript">
             $(function() {
 
-                Helpers.withPrismic(function(ctx) {
+                Helpersz.withPrismic(function(ctx) {
 
                     ctx.api.form("everything").set('page', parseInt(window.location.hash.substring(1)) || 1 ).ref(ctx.ref).submit(function(err, docs) {
 
