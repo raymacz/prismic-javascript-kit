@@ -29,31 +29,13 @@
                 </a>
             </script>
         </header>
-<!-- //response.results[0]["slugs"][0] -->
-<!--  doc.slug, doc.fragments.blog-post.relatedpost[i].value.document.slug -->
-<!-- doc.fragments["blog-post"]["relatedpost"][0]["value"]["document"]["slug"] -->
+
         <article>
             <script type="text/template">
-                <h1 id="crap1"> <%= doc["fragments"]["blog-post.relatedproduct"][0]["value"]["document"]["slug"] %></h1>
-                  <h1 id="crap3"> <%= doc["fragments"]["blog-post.relatedpost"][0]["value"]["document"]["slug"] %></h1>
-               <%= doc.asHtml(ctx) %>
+                <%= doc.asHtml(ctx) %>
             </script>
-            
         </article> 
-<div>
-            <p>zzzzz</p>
-            <p>zzzzz</p>
-            <p>zzzzz</p>
-            <p>zzzzz</p>
-            <p>zzzzz</p>
-            
-            </div>
-<div>
-    <p>hihggggggggggg</p>
-            <p id="testp">     dddddddddddddddddddddmatsay</p>
-             <p id="test2">     dddddddddddddddddddddmatsay</p>
-              <p id="test3">     dddddddddddddddddddddmatsay</p>
-</div>
+
         <aside>
             <script type="text/template">
                 <% if(doc.linkedDocuments.length > 0) { %>
@@ -65,13 +47,11 @@
                                 <a href="detail.html?id=<%= doc.linkedDocuments[i].id %>&slug=<%= doc.linkedDocuments[i].slug %>">
                                     <%= doc.linkedDocuments[i].slug %>
                                 </a>
-                           </li>
+                            </li>
                         <% } %>
                     </ul>
                 <% } %>
             </script>
-            
-         
         </aside>
 
         <script src="//static.cdn.prismic.io/prismic.js"></script>  <!-- the same -->
@@ -79,7 +59,6 @@
         <!-- Logic -->
 
         <script type="text/javascript">
-            
             $(function() {
                 ///--------------------
                 //  Helpersz.withPrismic(function(ctx) {
@@ -125,42 +104,6 @@
 
             });
         </script>
-         <script type="text/javascript">
-                  
-                  (function($) {
-                      var $As = $('article section');
-                      var $crap1 = $('#crap1');
-                      console.log($As+'art sec');
-                      console.log($crap1+'tesssssssssssssssssssst');
-                   console.log($As.find('a').first()    );
-                   $As.find('a').first().text("TEST");
-                   $crap1.text("SYET");
-                       $('article').find("#testp").text("sweetie");         
-                //.text("TESTER");
-                        
-                //        /*
-              //          $('<blockquote></blockquote>', {
-            //   class: 'co',
-           //    text: $this.text(),
-          //  }).prependTo($this.closest('p'));
-            
-                        
-                        
-                        
-      //                  (function() { /// $.filter(':nth-child(n+1)'), $.on(), $.addClass(), $.next(), $.slideDown(), $.slideUp(), $.siblings()
-    //var $dl = $('dl');
-     //   console.log($('dl').children('dd'));
-     //console.log($('dd').filter(':nth-child(n+8)'));
-       // $dl.children('dd').css('display','none');
-        //$dl.find('dd').first().slideDown();
-                        
-                        
-                        
-                      
-                  })(jQuery);
-                  
-               
-            </script>
+
     </body>
-    
 </html>

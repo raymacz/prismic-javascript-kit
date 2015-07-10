@@ -43,8 +43,13 @@
             var source = $(this).find('script[type="text/template"]').html(),
                 template = source ? tmpl(source) : undefined;
             if(template) {
+                //rbtm
+            //    var relatedpost = doc.getText("blog-post.relatedpost");
+             //   var relatedproduct = doc.getText("blog-post.relatedproduct");
+                //rbtm
+                
                 $(this).html(template(ctx));
-            }
+            } ///////////// NOTE RBTM //////////////////
         });
         if(callback){
             callback();
